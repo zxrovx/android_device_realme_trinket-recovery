@@ -15,7 +15,7 @@
 #
 
 # Release name
-PRODUCT_RELEASE_NAME := r5x
+PRODUCT_RELEASE_NAME := realme_trinket
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
@@ -24,17 +24,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_minimal.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
-# Inherit from r5x device
-$(call inherit-product, device/realme/r5x/device.mk)
+# Inherit from realme_trinket device
+$(call inherit-product, device/realme/realme_trinket/device.mk)
 
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := r5x
-PRODUCT_NAME := pb_r5x
-PRODUCT_BRAND := realme
-PRODUCT_MODEL := 5/5s/5i/5NFC
+PRODUCT_DEVICE := realme_trinket
+PRODUCT_NAME := twrp_realme_trinket
+PRODUCT_BRAND := Realme
+PRODUCT_MODEL := Realme Trinket Series
 PRODUCT_MANUFACTURER := realme
 
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \

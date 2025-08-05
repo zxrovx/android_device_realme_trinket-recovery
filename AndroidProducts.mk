@@ -15,7 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/pb_r5x.mk
+    $(LOCAL_DIR)/twrp_realme_trinket.mk
 
 COMMON_LUNCH_CHOICES := \
-    pb_r5x-eng
+    twrp_realme_trinket-user \
+    twrp_realme_trinket-userdebug \
+    twrp_realme_trinket-eng
