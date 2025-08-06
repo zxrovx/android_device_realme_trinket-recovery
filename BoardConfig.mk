@@ -66,6 +66,7 @@ BOARD_USES_QCOM_FBE_DECRYPTION := true
 TW_USE_FSCRYPT_POLICY := 2
 
 # File systems
+TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 # Fstab
@@ -127,7 +128,7 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # System as root
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
-BOARD_ROOT_EXTRA_FOLDERS := bluetooth dsp firmware persist
+BOARD_ROOT_EXTRA_FOLDERS := bluetooth dsp firmware persist metadata
 BOARD_SUPPRESS_SECURE_ERASE := true
 
 # Recovery
@@ -170,6 +171,7 @@ TWRP_INCLUDE_LOGCAT := true
 
 # VINTF
 PRODUCT_ENFORCE_VINTF_MANIFEST := true
+
 
 
 
