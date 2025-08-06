@@ -25,7 +25,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_minimal.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Inherit from realme_trinket device
-$(call inherit-product, device/realme/trinket/device.mk)
+$(call inherit-product, device/realme/realme_trinket/device.mk)
 
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/twrp/config/common.mk)
@@ -41,4 +41,5 @@ PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
     ro.product.model \
     ro.build.product \
     ro.product.device
+
 
