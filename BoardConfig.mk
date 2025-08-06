@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/realme/trinket
+DEVICE_PATH := device/realme/realme_trinket
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -173,6 +173,7 @@ TWRP_INCLUDE_LOGCAT := true
 
 # VINTF
 PRODUCT_ENFORCE_VINTF_MANIFEST := true
+
 
 
 
