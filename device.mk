@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/realme/trinket
+LOCAL_PATH := device/realme/realme_trinket
 
 # Apex
 TW_EXCLUDE_APEX := true
