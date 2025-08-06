@@ -85,7 +85,6 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_STATUS_INDENT_RIGHT=50
 
 	# R12.1 Settings
-	export FOX_VERSION="R11.3"
 	export OF_MAINTAINER="ZXROVX"
 	export FOX_BUILD_TYPE="Stable"
 	export FOX_VARIANT="kernel-414QBased"
