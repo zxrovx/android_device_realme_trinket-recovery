@@ -44,7 +44,6 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	# export OF_USE_MAGISKBOOT=1
  	export FOX_USE_UPDATED_MAGISKBOOT=1
 	export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES=1
- 	export OF_KEEP_FORCED_ENCRYPTION=1
 	export OF_DONT_PATCH_ENCRYPTED_DEVICE=1
 	export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
 	export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
@@ -90,7 +89,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	# R12.1 Settings
 	export OF_MAINTAINER="ZXROVX"
 	export FOX_BUILD_TYPE="Stable"
-	export FOX_VARIANT="kernel-414QBased"
+	export FOX_VARIANT="zxrovx_build"
 
 	# run a process after formatting data to recreate /data/media/0
 	export OF_FORCE_CREATE_DATA_MEDIA_ON_FORMAT=1
