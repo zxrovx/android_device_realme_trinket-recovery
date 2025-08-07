@@ -70,7 +70,8 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
   	export OF_WIPE_METADATA_AFTER_DATAFORMAT=1
   	export FOX_USE_BUSYBOX_BINARY=1
   	export OF_ADVANCED_SECURITY=1
-   	export OF_FORCE_CASEFOLDING=1
+   	export FOX_USE_DATE_BINARY=1
+   	# export OF_FORCE_CASEFOLDING=1
 	# dispense with the entire OTA menu
 	# export OF_DISABLE_OTA_MENU=1
  	export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=1
