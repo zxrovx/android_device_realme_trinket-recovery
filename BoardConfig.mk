@@ -90,12 +90,6 @@ BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 androidboot.console=ttyMSM0 \
     earlycon=msm_serial_dm,0x4a90000 androidboot.hardware=qcom \
     msm_rtb.filter=0x237 lpm_levels.sleep_disabled=1 \
     service_locator.enable=1 swiotlb=1 androidboot.configfs=true \
-    androidboot.usbcontroller=4e00000.dwc3 loop.max_part=7 androidboot.selinux=permissive
-
-BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 androidboot.console=ttyMSM0 \
-    earlycon=msm_serial_dm,0x4a90000 androidboot.hardware=qcom \
-    msm_rtb.filter=0x237 lpm_levels.sleep_disabled=1 \
-    service_locator.enable=1 swiotlb=1 androidboot.configfs=true \
     androidboot.usbcontroller=4e00000.dwc3 loop.max_part=7 \
     androidboot.selinux=permissive buildvariant=userdebug
 
@@ -189,8 +183,15 @@ TW_INCLUDE_RESETPROP := true
 TARGET_USES_LOGD := true
 TWRP_INCLUDE_LOGCAT := true
 
+TW_FLASH_FROM_STORAGE := true
+TW_INTERNAL_STORAGE_PATH := "/data/media/0"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+TW_EXTERNAL_STORAGE_PATH := "/external_sd"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+
 # VINTF
 PRODUCT_ENFORCE_VINTF_MANIFEST := true
+
 
 
 
