@@ -16,9 +16,6 @@
 
 LOCAL_PATH := device/realme/realme_trinket
 
-# Apex
-TW_EXCLUDE_APEX := true
-
 # Build from source
 TARGET_RECOVERY_DEVICE_MODULES += \
     android.hidl.base@1.0 \
@@ -38,7 +35,7 @@ TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@2.0.so
 
 # qcom decryption
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES_ENG += \
     qcom_decrypt \
     qcom_decrypt_fbe
 
@@ -46,9 +43,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
-
 # PRODUCT_SHIPPING_API_LEVEL indicates the first api level, device has been commercially launched on.
 PRODUCT_SHIPPING_API_LEVEL := 28
 
 # Add TW_DEVICE_VERSION
-TW_DEVICE_VERSION := by ZXROVX
+TW_DEVICE_VERSION := _ZXROVX
