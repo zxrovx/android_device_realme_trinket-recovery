@@ -35,10 +35,16 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a73
 TARGET_USES_64_BIT_BINDER := true
 
+# APEX
+OVERRIDE_TARGET_FLATTEN_APEX := true
+
 ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
 TARGET_NO_BOOTLOADER := true
 TARGET_USES_UEFI := true
+
+# Display
+TARGET_SCREEN_DENSITY := 320
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := RMX1911,RMX1925,RMX2030,RMX1927,r5x,realme_trinket
@@ -85,6 +91,14 @@ BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 androidboot.console=ttyMSM0 \
     service_locator.enable=1 swiotlb=1 androidboot.configfs=true \
     androidboot.usbcontroller=4e00000.dwc3 loop.max_part=7 androidboot.selinux=permissive
 
+BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 androidboot.console=ttyMSM0 \
+    earlycon=msm_serial_dm,0x4a90000 androidboot.hardware=qcom \
+    msm_rtb.filter=0x237 lpm_levels.sleep_disabled=1 \
+    service_locator.enable=1 swiotlb=1 androidboot.configfs=true \
+    androidboot.usbcontroller=4e00000.dwc3 loop.max_part=7 \
+    androidboot.selinux=permissive buildvariant=userdebug
+
+
 BOARD_BOOTIMG_HEADER_VERSION := 1
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
@@ -104,7 +118,10 @@ TARGET_FORCE_PREBUILT_KERNEL := true
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
 
 # Partitions
-BOARD_FLASH_BLOCK_SIZE := 262144
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+BOARD_USES_METADATA_PARTITION := true
+BOARD_HAS_LARGE_FILESYSTEM := true
+BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 5114429440
@@ -113,7 +130,6 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 12884901888
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
 BOARD_VENDORIMAGE_PARTITION_SIZE := 1452277760
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
-BOARD_USES_METADATA_PARTITION := true
 
 TARGET_COPY_OUT_SYSTEM := system
 TARGET_COPY_OUT_VENDOR := vendor
@@ -131,14 +147,12 @@ QCOM_BOARD_PLATFORMS += trinket
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
-# System as root
-BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+# 
 BOARD_ROOT_EXTRA_FOLDERS := bluetooth dsp firmware persist metadata
 BOARD_SUPPRESS_SECURE_ERASE := true
 
 # Recovery
-BOARD_HAS_LARGE_FILESYSTEM := true
-TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
+TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 
 # TWRP specific build flags
 TW_THEME := portrait_hdpi
@@ -176,6 +190,7 @@ TWRP_INCLUDE_LOGCAT := true
 
 # VINTF
 PRODUCT_ENFORCE_VINTF_MANIFEST := true
+
 
 
 
