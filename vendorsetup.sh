@@ -71,10 +71,15 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
   	export FOX_USE_BUSYBOX_BINARY=1
   	export OF_ADVANCED_SECURITY=1
    	export FOX_USE_DATE_BINARY=1
+    	export OF_UNBIND_SDCARD_F2FS=1
    	# export OF_FORCE_CASEFOLDING=1
 	# dispense with the entire OTA menu
 	# export OF_DISABLE_OTA_MENU=1
- 	export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=1
+	export OF_KEEP_DM_VERITY=1
+	export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=1
+	export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
+	export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
+
 	# no additional check for MIUI props
 	export OF_NO_ADDITIONAL_MIUI_PROPS_CHECK=1
 
