@@ -58,7 +58,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
  	export FOX_USE_FSCK_EROFS_BINARY=1
 	export OF_SKIP_MULTIUSER_FOLDERS_BACKUP=1
 	export OF_QUICK_BACKUP_LIST="/boot;/dtbo;/system;/vendor;"
-	export OF_PATCH_AVB20=1
+	# export OF_PATCH_AVB20=1
 	export FOX_DELETE_AROMAFM=1
 	export FOX_BUGGED_AOSP_ARB_WORKAROUND="1546300800" # Tuesday, January 1, 2019 12:00:00 AM GMT 00:00
 	export FOX_ENABLE_APP_MANAGER=1
@@ -98,7 +98,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_VARIANT="zxrovx_build-$(date '+%Y%m%d-%H%M')"
 
 	# run a process after formatting data to recreate /data/media/0
-	export OF_FORCE_CREATE_DATA_MEDIA_ON_FORMAT=1
+	# export OF_FORCE_CREATE_DATA_MEDIA_ON_FORMAT=1
 
 	# Necessary to decrypt most r5x ROMs
 	export OF_FIX_DECRYPTION_ON_DATA_MEDIA=1
